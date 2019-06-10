@@ -81,3 +81,26 @@ console.log(numLessThan(2)); //expected false
 console.log(numLessThan(20)); //expected number is the biggest
 console.log(numLessThan(5)); //expected false
 console.log(numLessThan(500)); //expected number is the biggest 
+
+
+//RETURN A REVERSED ARRAY
+//Works
+function reverse(arr) {
+	arr.reverse();
+	return arr;
+}
+
+// console.log(reverse(['g', 'o', 'o', 'd']))
+// console.log(reverse(['a', 'b', 'c', 'd']))
+
+//ES6 Syntax take a string and return it reversed 
+const revStr = str => {
+    return str.split('').reverse('').join('')
+}
+
+//split method to turn string into a new array "hello" -> ['w', 'o', 'r', 'k']
+//reverse method the new array ['w', 'o', 'r', 'k'] -> ['k', 'r', 'o', 'w']
+//join method turns it back into a string ['k', 'r', 'o', 'w'] -> "krow"
+
+console.log(revStr('work'));
+console.log(revStr('hello'));
