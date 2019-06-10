@@ -44,3 +44,40 @@ const addy = n => {
 
 console.log(addy(10));
 console.log(addy(-12));
+
+//RETURN 0 IF ZERO TRUE
+//works
+function lessThanOrEqualToZero(num) {
+	if(num <= 0) {
+		return true
+	} else {
+		return false;
+	}
+}
+// console.log(lessThanOrEqualToZero(-10));
+// console.log(lessThanOrEqualToZero(1));
+
+//ES6 with ternary 
+//Works
+const zeroLessThan = n => (n <= 0 ? true : false);
+
+console.log(zeroLessThan(4));
+console.log(zeroLessThan(2));
+console.log(zeroLessThan(-3));
+
+//ES6 with if/else/ else if
+const numLessThan = n => {
+    if(n <= 0) {
+        return 'my number is true';
+    } else if (n < 10) {
+        return 'my number is false';
+    } else (n >= 15) 
+        return 'my number is the biggest !'
+    }
+
+console.log(numLessThan(0)); //expected true
+console.log(numLessThan(-1)); //expected true
+console.log(numLessThan(2)); //expected false
+console.log(numLessThan(20)); //expected number is the biggest
+console.log(numLessThan(5)); //expected false
+console.log(numLessThan(500)); //expected number is the biggest 
