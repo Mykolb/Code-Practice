@@ -139,7 +139,7 @@ const edge = (s1, s2) => {
 console.log(nextEdge(10, 6))
 console.log(nextEdge(15, 7))
 
-//concatenating two arrays 
+//concatenating two arrays using concat
 arr1 = [1, 2, 3]
 arr2 = [4,5,6]
 
@@ -149,3 +149,16 @@ const concat = (arr1, arr2) => {
    }
 
 console.log(concat(arr1, arr2))
+
+//concatenating using spread 
+
+
+const spread = (arr3, arr4) => {
+    let array = [...arr3, ...arr4]
+       return array
+   }
+
+arr3 = [7, 8, 9]
+arr4 = [10,11,12]
+
+console.log(spread(arr3, arr4))
