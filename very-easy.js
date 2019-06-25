@@ -104,3 +104,20 @@ const revStr = str => {
 
 console.log(revStr('work'));
 console.log(revStr('hello'));
+
+//reverse an array 
+//works
+function reverse(arr) {
+    return arr.reverse()
+}
+
+// console.log(reverse([1,2,3,4]))
+// console.log(reverse([100,105,110, 115]))
+
+//ES6 Syntax
+//works
+let rev = array => array.reverse().sort();
+
+
+console.log(rev([6,7,8,9]))
+console.log(rev([56,55,23,19]))
