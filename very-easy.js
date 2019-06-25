@@ -128,5 +128,13 @@ function nextEdge(side1, side2) {
 	return maxEdge
 }
 
-console.log(nextEdge(20, 6), 2)
-console.log(nextEdge(34, 7), 5)
+// console.log(nextEdge(20, 6), 2)
+// console.log(nextEdge(34, 7), 5)
+ 
+const edge = (s1, s2) => {
+    max = (s1, s2) - 1 
+    return max
+    }
+
+console.log(nextEdge(10, 6))
+console.log(nextEdge(15, 7))
