@@ -138,3 +138,14 @@ const edge = (s1, s2) => {
 
 console.log(nextEdge(10, 6))
 console.log(nextEdge(15, 7))
+
+//concatenating two arrays 
+arr1 = [1, 2, 3]
+arr2 = [4,5,6]
+
+const concat = (arr1, arr2) => {
+    let joinedArray = arr1.concat(arr2)
+       return joinedArray
+   }
+
+console.log(concat(arr1, arr2))
