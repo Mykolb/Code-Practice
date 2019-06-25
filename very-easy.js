@@ -111,8 +111,8 @@ function reverse(arr) {
     return arr.reverse()
 }
 
-// console.log(reverse([1,2,3,4]))
-// console.log(reverse([100,105,110, 115]))
+console.log(reverse([1,2,3,4]))
+console.log(reverse([100,105,110, 115]))
 
 //ES6 Syntax
 //works
@@ -121,3 +121,12 @@ let rev = array => array.reverse().sort();
 
 console.log(rev([6,7,8,9]))
 console.log(rev([56,55,23,19]))
+
+//max edge of a triangle 
+function nextEdge(side1, side2) {
+    maxEdge = (side1 + side2) - 1  
+	return maxEdge
+}
+
+console.log(nextEdge(20, 6), 2)
+console.log(nextEdge(34, 7), 5)
