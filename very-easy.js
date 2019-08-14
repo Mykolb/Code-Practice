@@ -162,3 +162,23 @@ arr3 = [7, 8, 9]
 arr4 = [10,11,12]
 
 console.log(spread(arr3, arr4))
+
+//Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+
+ function lessThanOrEqualToZero(num) {
+     if(num <= 0) {
+         return true
+     } else {
+         return false
+     }
+ }
+
+console.log(lessThanOrEqualToZero(4))
+console.log(lessThanOrEqualToZero(-2))
+
+const lessThanZero = num => {
+  return num <= 0 ? true : false 
+}
+
+console.log(lessThanZero(3))
+console.log(lessThanZero(-10))
