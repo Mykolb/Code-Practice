@@ -182,3 +182,19 @@ const lessThanZero = num => {
 
 console.log(lessThanZero(3))
 console.log(lessThanZero(-10))
+
+//find inxed of given item
+//returns element ion first index of array
+//item number tells you to start from that index 
+function search(arr, item) {
+    return arr.indexOf(item)
+}
+
+console.log(search(['apple', 'banana', 'oranges', 'pears'], 'strawberry')) // expected -1 b/c doesn't exist
+console.log(search(['apple', 'banana', 'oranges', 'pears'], 'oranges')) //expected 2
+
+const searching = (arr, item) => arr.indexOf(item)
+
+
+console.log(searching(['red', 'blue', 'purple', 'yellow', 'taupe'], 'taupe')) //expected 4
+console.log(searching(['red', 'blue', 'purple', 'yellow', 'taupe'], 'red')) //expected 0
