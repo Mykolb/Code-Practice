@@ -220,6 +220,10 @@ const concatN = (firstName, lastName) => `${lastName}, ${firstName}`
 console.log(concatName('Maya', 'Lynn'))
 console.log(concatName('Dj', 'Khaled'))
 
+
+
+//% modulus calculates remainder after division 
+//if remainder after dividing by 5 is 0, return true, else false 
 function divisibleByFive(n) {
 	if (n % 5 === 0) {
 		return true
@@ -252,3 +256,24 @@ const getFirst = arr => arr[0];
 
 console.log(getFirst(['hey', 'hi', 'hello']))
 console.log(getFirst(['soup', 'tomato', 'carrot', 'lettuce', 'broccoli']))
+
+
+//divisible by 100
+//% modulus calculates remainder after division 
+//if remainder after dividing by 100 is 0, return true, else false 
+function divisible(num) {
+    if( num % 100 === 0) {
+        return true
+    }
+    return false;
+}
+
+console.log(divisible(10))
+console.log(divisible(200))
+console.log(divisible(34))
+
+
+const divisibles = num => num % 100 === 0 ? true : false;
+
+console.log(divisibles(10000))
+console.log(divisibles(5))
