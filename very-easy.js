@@ -183,7 +183,7 @@ const lessThanZero = num => {
 console.log(lessThanZero(3))
 console.log(lessThanZero(-10))
 
-//find inxed of given item
+//find index of given item
 //returns element ion first index of array
 //item number tells you to start from that index 
 function search(arr, item) {
@@ -198,3 +198,57 @@ const searching = (arr, item) => arr.indexOf(item)
 
 console.log(searching(['red', 'blue', 'purple', 'yellow', 'taupe'], 'taupe')) //expected 4
 console.log(searching(['red', 'blue', 'purple', 'yellow', 'taupe'], 'red')) //expected 0
+
+
+//concat first/last name into string 
+
+function concatName(firstName, lastName) {
+    const last = lastName;
+    const first = firstName;
+
+return `${last}, ${first}`
+}
+
+console.log(concatName('Siri', 'Berry'))
+console.log(concatName('Mary', 'Pat'))
+
+
+
+
+const concatN = (firstName, lastName) => `${lastName}, ${firstName}`
+
+console.log(concatName('Maya', 'Lynn'))
+console.log(concatName('Dj', 'Khaled'))
+
+function divisibleByFive(n) {
+	if (n % 5 === 0) {
+		return true
+	} else {
+		return false
+	}
+}
+
+console.log(divisibleByFive(5))
+console.log(divisibleByFive(15))
+console.log(divisibleByFive(2))
+
+const divisibleFive = num => num % 5 === 0 ? true : false;
+
+console.log(divisibleFive(5))
+console.log(divisibleFive(20))
+console.log(divisibleFive(23))
+console.log(divisibleFive(41))
+
+//get first item in array
+function getFirstValue(arr) {
+    return arr[0]
+}
+
+console.log(getFirstValue(['1', '2', '3']))
+console.log(getFirstValue(['cheese', '2', 'dog', '7']))
+
+
+const getFirst = arr => arr[0];
+
+console.log(getFirst(['hey', 'hi', 'hello']))
+console.log(getFirst(['soup', 'tomato', 'carrot', 'lettuce', 'broccoli']))
