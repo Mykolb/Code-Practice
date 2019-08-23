@@ -277,3 +277,22 @@ const divisibles = num => num % 100 === 0 ? true : false;
 
 console.log(divisibles(10000))
 console.log(divisibles(5))
+
+
+// Write a function that returns the length of a string. Make your function recursive.
+//works!
+// function length(str) {
+// 	return str.length
+// }
+
+// console.log(length('hello'))
+// console.log(length('i'))
+// console.log(length('suuuuup'))
+
+
+
+const length = str => str.length
+
+console.log(length('hello'))
+console.log(length('i'))
+console.log(length('suuuuup'))
