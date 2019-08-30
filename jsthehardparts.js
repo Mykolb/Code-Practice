@@ -68,3 +68,52 @@ return input * 2
 }
 
 let result = copyArrayAndManipulate([1,2,3], multiplyBy2)
+
+
+function copyArrayAndManipulate(array, instructions) { //<------- Higher order function 
+    let output = [];   
+    for (let i = 0; i < array.length; i++) {    
+        output.push(instructions(array[i]))
+    }
+    return output
+}
+function multiplyBy2(input) { //<------ call back 
+}
+
+let result = copyArrayAndManipulate([1,2,3], multiplyBy2)
+
+
+
+
+function instructionGenerator() { //func declaration runs first, skips middle b/c func isn't called ()
+    function multiplyBy2 (num) { //tells JS to go free some space up in memory, use that label to refer to functionality we just defined
+        return num*2
+    }
+    return multiplyBy2
+}
+
+
+let generateFunc = instructionGenerator() //generateFunc is a label, temp undefined; instructionGenerator runs b/c ()
+//() say go look for this functions and do it's code, if there's input great, fill it in, if not go run me 
+
+generateFunc(3) //would have to be called to run multiplyBy2 b/c multiplyBy2  are stored here
+//starts new execution context 
+//running globally
+
+
+function outer() {
+    let counter = 0;
+    function incrementCounter() {
+        counter ++
+    }
+    return incrementCounter
+}
+
+let myNewFunc = outer()
+myNewFunc()
+
+//lines 106-111 incrementCounter fun creates a special bond to immediate total surrounding live local mempory
+//this fn gets a special bond to all surrounfing data
+//incrementCounter gets reference to surrounding data when it gets defined in this case, counter is
+ //that is closure, the  fn got a bond to its surrounding data on it's back and when it was defined came the backpack
+//backpack is persistent, it holds onto that data live, holds store of data on it's back
