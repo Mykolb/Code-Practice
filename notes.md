@@ -81,3 +81,8 @@
     - our lexical scope (the THE AVAILABLE LIVE DATA when our fn was defined ) is what determines our available variables and prioritization at fn execution, not where our fn is called 
 
     -Lexical means: the position of my fn definition, not where it gets invoked, is what determines what data I will have available to me, when my fn gets invoked
+
+## THE POWER OF CLOSURE
+
+    - Now: Our functions get memories - once, memorize
+    - ADVANCED: we can implement the module pattern in JS
