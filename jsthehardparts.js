@@ -117,3 +117,145 @@ myNewFunc()
 //incrementCounter gets reference to surrounding data when it gets defined in this case, counter is
  //that is closure, the  fn got a bond to its surrounding data on it's back and when it was defined came the backpack
 //backpack is persistent, it holds onto that data live, holds store of data on it's back
+
+
+function printHello() {
+    console.log('Hello')
+}
+// setTimeout | printHello fn | complete
+setTimeout(printHello, 0) // when setTimeout is done running it executes the printHello fn and 
+
+console.log('Me first') //printed before printHello b
+
+function printHello() { //print hello is asynchronously delayed
+    console.log('Hello')
+}
+
+function blockFor1Sec() { //doing something here that just happens to take time for the computer to do; thousand millisecs before we come out of this function
+    //blocks in the JS thread for 1 sec
+    //assume for loop is in here 
+}
+
+setTimeout(printHello, 0)
+
+blockFor1Sec()
+
+console.log('First')
+
+
+
+
+function display(data) { //define fn
+    console.log(data.post)
+}
+
+//jquery
+$.get('http://twitter.com/willsen/tweet/1', display)
+
+console.log('First!')
+
+//OOP
+let user1 = {
+    name: 'Will', 
+    score: 3,
+    increment: function() {
+        user1.score++
+    }
+}
+
+user1.increment()
+
+//using dot notation
+
+let user2 = {} //create empty obj
+
+user2.name = 'Paul'; //assign propertied to that obj
+user2.score = 2;
+user2.increment = function() {
+    user2.score++
+}
+
+//using obj.create
+
+let user3 = Object.create(null)//create empty obj; null isn't reason that is it empty
+
+user2.name = 'Sam'; //assign properties to that obj
+user2.score =  8;
+user2.increment = function() {
+    user3.score++
+}
+
+//objects above not dry
+//GENERALIZE!!
+//while valid it would fill up memeory funning the same increment function 
+function createUser(name, score ) {
+    let newUser = {}
+        newUser.name = name; //creating properties
+        newUser.score = score;
+        newUser.increment = function() {
+            newUser.score++
+        }
+}
+
+let user1 = createUser('Will', 3)
+let user2 = createUser('Sam', 8)
+user1.increment() //looks for user1 then look sin user1 onject ofr increment fn
+user2.increment()
+
+//using prototype nature of JS-solution 2 in full
+//sophisticated but not standard 
+function userCreator (name, score) {
+    let newUser = Object.create(userFunctionStore) //create an empty obj; declaring variable and assigning an empty object with userFunction store set as object 
+    newUser.name = name
+    newUser.score = score
+    return newUser
+}
+
+let userFunctionStore = {  //obj with 2 fn's stored in it
+    increment: function(){this.score++},
+    login: function()(console.log('You are logged in'))
+}
+
+let user1 = userCreator('Mary', 3)
+let user2 = userCreator('Paul', 6)                
+user1.increment()
+
+//when we call the constructor fn with new in front we automate 2 things:
+    //1. Create a new user obj
+    //2. return the new user obj
+
+
+    //new keyword automates alot of manual work
+    function userCreator (name, score) {
+        // let newUser = Object.create(userFunctionStore) //create an empty obj; declaring variable and assigning an empty object with userFunction store set as object 
+        newUser.name = name
+        newUser.score = score
+        // return newUser
+    }
+    
+   userCreator.prototype // {}
+   userCreator.prototype.increment = function(){
+       this.score ++ 
+   }
+    
+    let user1 = new userCreator('Mary', 3)
+    
+    
+    //ES 2015 version of prototype fn above 
+    class User {
+        constructor (name, score) {
+            this.name = name
+            this.score = score
+        }
+
+
+        increment() {
+            this.score++
+        }
+        login() {
+            console.log('login')
+        }
+    }
+
+    let user1 = new User('Eva, 0')
+    user1.increment()

@@ -86,3 +86,48 @@
 
     - Now: Our functions get memories - once, memorize
     - ADVANCED: we can implement the module pattern in JS
+
+## Asynchronicity is the backbone of modern web dev in DJ
+    - JS is a single threaded (one command executing at a time, one line of code at a time ) and has a synchronous execution model (each line is executed in order the code appears)
+
+    - what if we need to wait some time before we can execute certain bits of code? 
+
+    - API: There is some data out there that is not in my app but I can interact/interface with that functionality
+
+    - API's referred to as interface because they are not apart of JS but interfaces(communictes) with the web browser ex: setTimeout 
+
+    
+## CALLBACK QUEUE
+     - pass function definition to que, waiting for some condition to take p[lace on call stack
+     - won't add to call stack until call stack is empty 
+       
+## 3 RULES FOR THE EXECUTION OF SYNCHRONOUSLY DELAYED CODE:
+    - Hold each deferred fn in a queue (the callback queue) when the API 'completes
+    - Add the fn to the call stack 9ie execute the fn) ONLY when the call stack is totally empty (Have the Event Loop check this condition)
+
+    - Event Loop: process of checking is my call stack empty, does my callstack have a fn in it, checking, checking....until it can add the fn when the event loop says it's ok
+
+##MANY THINGS WHERE WAITING WOULD BLOCK OUR THREAD AND WE USE BROWSER API's INSTEAD:
+    - a timer to finish running
+    - new info from server(Ajax)
+    - indication that a portion of the page has loaded
+    - user interaction (clicks, mouseovers, drags)
+    - writing/reading to file system (Node)
+    - writing/reading database (Node)
+
+    -JS cannot speak to internet
+
+## SOME COME BACK WITH DATA> THE DESIGN OF THE BROWSER API WE ARE USING DETERMINES HOW WE ACCESS THE RETURNED DATA 
+
+
+## ASYNC CALLBACKS, WEB API'S, CALLBACK QUEUE & EVENT LOOP ALLOW US TO DEFER OUT ACTIONS UNTIL THE "WORK" (AN API REQUEST, TIMER, ETC) IS COMPLETED AND CONTINUE RUNNING OUR CODE LINE BY LINE IN THE MEANTIME
+
+##ASYNC JS IS THE BACKBONE OF THE MODERN WEB LETTING US BUILD FAST NON BLOCKING APPS
+
+## OOP= POPULAR PARADIGM FOR STRUCTURING COMPLEX CODE
+    - easy to add features & ucntionality
+    - Performant (effieient in terms of memory)
+    - Easy for us and other developers to reason about(a clear structure)
+
+## OBJECTS STORE FN's WITH THEIR ASSOCIATED DATA
+    - encapsulation: binding together the data and functions that manipulate the data
