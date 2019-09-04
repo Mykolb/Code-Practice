@@ -232,7 +232,7 @@ user1.increment()
         newUser.score = score
         // return newUser
     }
-    
+    //prototype property has the stored functions on it 
    userCreator.prototype // {}
    userCreator.prototype.increment = function(){
        this.score ++ 
