@@ -1,0 +1,111 @@
+// Day 0
+function greeting(parameterVariable) {
+    // This line prints 'Hello, World!' to the console:
+    console.log('Hello, World!');
+
+    // Write a line of code that prints parameterVariable to stdout using console.log:
+    parameterVariable = 'Welcome to 10 Days of JavaScript!'
+    parameterVariable = 'HackerRank is the best!'
+    console.log(parameterVariable)
+}
+
+greeting()
+
+
+//day 1
+function performOperation(secondInteger, secondDecimal, secondString) {
+    // Declare a variable named 'firstInteger' and initialize with integer value 4.
+    const firstInteger = 4;
+    //turned string into number
+    let numbers = firstInteger + Number.parseInt(secondInteger)
+    console.log(numbers)
+    // Declare a variable named 'firstDecimal' and initialize with floating-point value 4.0.
+    const firstDecimal = 4.0;
+    //turned string decimal into decimal
+    let decimals = firstDecimal + parseFloat(secondDecimal)
+    console.log(decimals)
+    // Declare a variable named 'firstString' and initialize with the string "HackerRank".
+    const firstString = 'HackerRank ';
+    //concat 
+    let strings = firstString + "" + secondString
+    console.log(strings)
+}
+
+performOperation(4, 2.9, 'hi')
+
+
+//day 1
+function getArea(length, width) {
+    let area;
+    // Write your code here
+    area = length * width
+    return area
+}
+/**
+*   Calculate the perimeter of a rectangle.
+*	
+*	length: The length of the rectangle.
+*   width: The width of the rectangle.
+*   
+*	Return a number denoting the perimeter of a rectangle.
+**/
+function getPerimeter(length, width) {
+    let sum = length + width
+    let perimeter;
+    // Write your code here
+    perimeter = 2 * (sum)
+    return perimeter;
+}
+
+console.log(getArea(4, 3))
+console.log(getPerimeter(5, 5))
+
+
+// day 1
+function main() {
+    // Write your code here. Read input using 'readLine()' and print output using 'console.log()'.
+    const PI = Math.PI
+    let r = 5
+    // Print the area of the circle:
+    //ise Math.pow for exponent with base as r, and 2 as exponent
+     let area = PI * Math.pow(r, 2)
+     console.log(area)
+    // Print the perimeter of the circle:
+    let perimeter = 2 * PI * r
+    console.log(perimeter)
+}
+
+main()
+
+//day 2
+function getGrade(score) {
+    let grade; 
+    // Write your code here
+    if ( score > 25 && score <= 30 ) {
+        grade = 'A'
+        return grade 
+    } else if (score > 20 && score <= 25) {
+        grade = 'B'
+        return grade 
+    } else if (score > 15 && score <= 20){
+        grade = 'C'
+        return grade 
+    } else if (score > 10 && score <= 15) {
+        grade = 'D'
+        return grade 
+    } else if (score > 5 && score <= 10) {
+        grade = 'E'
+        return grade 
+    } else {
+    (score >= 0 && score <= 5) 
+        grade = 'F'
+    return grade 
+    }
+}
+
+console.log(getGrade(22))
+console.log(getGrade(27))
+console.log(getGrade(15))
+console.log(getGrade(18))
+console.log(getGrade(6))
+console.log(getGrade(4))

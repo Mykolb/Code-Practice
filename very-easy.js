@@ -296,3 +296,10 @@ const length = str => str.length
 console.log(length('hello'))
 console.log(length('i'))
 console.log(length('suuuuup'))
+
+
+
+
+function and(a, b) {
+    return	(a && a ? true : false)
+    }
