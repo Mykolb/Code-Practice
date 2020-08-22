@@ -109,3 +109,87 @@ console.log(getGrade(15))
 console.log(getGrade(18))
 console.log(getGrade(6))
 console.log(getGrade(4))
+
+
+//day 2
+function factorial(n) {
+    if(n===0||n===1){
+      return 1;
+    }
+    //works like 5! = 5 * (5-1) * (4-1)* (3-1) * (2-1)
+    return n*factorial(n-1);
+   }
+
+
+// Complete the getLetter(s) function in the editor. It has one parameter: a string, , consisting of lowercase English alphabetic letters (i.e., a through z). It must return A, B, C, or D depending on the following criteria:
+
+// If the first character in string  is in the set , then return A.
+// If the first character in string  is in the set , then return B.
+// If the first character in string  is in the set , then return C.
+// If the first character in string  is in the set , then return D.
+// Hint: You can get the letter at some index  in  using the syntax s[i] or s.charAt(i).
+
+let letter1 = new Set();
+console.log(letter1)
+let letter2 = new Set();
+console.log(letter2)
+let letter3 = new Set();
+console.log(letter3)
+let letter4 = new Set();
+console.log(letter4)
+
+
+ 
+
+function getLetter(s) {
+    let letter1 = new Set();
+    console.log(letter1)
+    let letter2 = new Set();
+    console.log(letter2)
+    let letter3 = new Set();
+    console.log(letter3)
+    let letter4 = new Set();
+    console.log(letter4)
+
+
+
+
+    letter1.add('a').add('e').add('i').add('o').add('u')
+    console.log(letter1)
+
+    letter2.add('b').add('c').add('d').add('f').add('g')
+    console.log(letter2)
+
+    letter3.add('h').add('j').add('k').add('l').add('m').add('n')
+    console.log(letter3)
+
+    letter4.add('n').add('p').add('r').add('s').add('t').add('v').add('w').add('x').add('y').add('z')
+    console.log(letter4)
+
+    switch (true) {
+        case letter1.has(s.charAt(0)):
+            return 'A';
+            break;
+        case letter2.has(s.charAt(0)):
+            return 'B'
+            break;
+        case letter3.has(s.charAt(0)):
+            return 'C'
+            break;
+        case letter4.has(s.charAt(0)):
+            return 'D'
+            break;
+        default:
+            break;
+
+}
+}
+
+
+
+console.log(getLetter('rrs'))
+console.log(getLetter('mxy'))
+console.log(getLetter('bay'))
+
+
+

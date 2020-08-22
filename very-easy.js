@@ -299,7 +299,3 @@ console.log(length('suuuuup'))
 
 
 
-
-function and(a, b) {
-    return	(a && a ? true : false)
-    }
