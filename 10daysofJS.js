@@ -204,7 +204,8 @@ function getLetter(s) {
 // Print the perimeter
 // console.log(triangle.perimeter());
 // When executed with a properly implemented Polygon class, this code should print the result of.
-
+//reduce to sum all values in the arr and return single value
+//oops! almost forget to pass in the param
 // DAY 4
 class Polygon {
     constructor(length) {
@@ -227,3 +228,28 @@ let rec2 = new Polygon([10, 12, 5])
 
 console.log(rec1.perimeter())
 console.log(rec2.perimeter())
+
+
+// Complete the isPositive function below. It has one integer parameter, a. If the value of a is positive, it must return the string YES. Otherwise, it must throw an Error according to the following rules:
+
+// If a is 0, throw an Error with  Zero Error.
+// If a is negative, throw an Error with  Negative Error.
+
+//  Day 3       
+function isPositive(a) {
+
+    if (a === 0)  {
+        throw Error('Zero Error')
+    } else if  (a < 0) {
+        throw Error('Negative Error')
+    } else {
+        return 'YES'
+    }
+}
+
+
+console.log(isPositive(3))
+console.log(isPositive(2))
+console.log(isPositive(0))
+console.log(isPositive(-122))
+
