@@ -1,4 +1,4 @@
-// Day 0
+// *********** Day 0 START **************
 function greeting(parameterVariable) {
     // This line prints 'Hello, World!' to the console:
     console.log('Hello, World!');
@@ -12,7 +12,6 @@ function greeting(parameterVariable) {
 greeting()
 
 
-//day 1
 function performOperation(secondInteger, secondDecimal, secondString) {
     // Declare a variable named 'firstInteger' and initialize with integer value 4.
     const firstInteger = 4;
@@ -32,9 +31,11 @@ function performOperation(secondInteger, secondDecimal, secondString) {
 }
 
 performOperation(4, 2.9, 'hi')
+// *********** Day 0 END **************
 
 
-//day 1
+
+// *********** Day 1 START **************
 function getArea(length, width) {
     let area;
     // Write your code here
@@ -61,7 +62,18 @@ console.log(getArea(4, 3))
 console.log(getPerimeter(5, 5))
 
 
-// day 1
+function factorial(n) {
+    if(n===0||n===1){
+      return 1;
+    }
+    //works like 5! = 5 * (5-1) * (4-1)* (3-1) * (2-1)
+    return n*factorial(n-1);
+   }
+
+console.log(factorial(5))
+
+
+
 function main() {
     // Write your code here. Read input using 'readLine()' and print output using 'console.log()'.
     const PI = Math.PI
@@ -76,8 +88,10 @@ function main() {
 }
 
 main()
+// *********** Day 1 END **************
 
-//day 2
+
+// *********** Day 2 START **************
 function getGrade(score) {
     let grade; 
     // Write your code here
@@ -110,15 +124,6 @@ console.log(getGrade(18))
 console.log(getGrade(6))
 console.log(getGrade(4))
 
-
-//day 2
-function factorial(n) {
-    if(n===0||n===1){
-      return 1;
-    }
-    //works like 5! = 5 * (5-1) * (4-1)* (3-1) * (2-1)
-    return n*factorial(n-1);
-   }
 
 
 // Complete the getLetter(s) function in the editor. It has one parameter: a string, , consisting of lowercase English alphabetic letters (i.e., a through z). It must return A, B, C, or D depending on the following criteria:
@@ -186,11 +191,91 @@ function getLetter(s) {
 }
 
 
-// console.log(getLetter('rrs'))
-// console.log(getLetter('mxy'))
-// console.log(getLetter('bay'))
+console.log(getLetter('rrs'))
+console.log(getLetter('mxy'))
+console.log(getLetter('bay'))
 
 
+// *********** Day 2 END **************
+
+
+
+
+// *********** Day 3 START **************
+/**
+*   Return the second largest number in the array.
+*   nums - An array of numbers.
+*   The second largest number in the array.
+**/
+function getSecondLargest(nums) {
+    let maxNum = Math.max.apply(null, nums) //get max num of array
+      nums.splice(nums.indexOf(maxNum), 1) //remove max num from array
+      return Math.max.apply(null, nums) // get 2nd largest number
+  }
+
+console.log(getSecondLargest([6,4,3,1]))
+
+
+// Complete the reverseString function; it has one parameter, s. You must perform the following actions:
+
+// Try to reverse string  using the split, reverse, and join methods.
+// If an exception is thrown, catch it and print the contents of the exception's msg on a new line.
+// Print s on a new line. If no exception was thrown, then this should be the reversed string; if an exception was thrown, this should be the original string.
+
+// You must write two print statements using console.log():
+
+// Print the contents of a caught exception's  on a new line. If no exception was thrown, this line should not be printed.
+// Print  on a new line. If no exception was thrown, then this should be the reversed string; if an exception was thrown, this should be the original string.
+
+
+function reverseString(s) {
+    
+
+    //reverse the string 
+
+  
+
+ try {
+    let reverseIt =  s.split("").reverse().join("")
+     console.log(reverseIt)
+ }
+ catch(err) {
+   // Block of code to handle errors
+   console.log(err)
+   console.log(s)
+ }
+
+}
+
+console.log(reverseString("1234"))
+console.log(reverseString(123))
+
+
+
+
+// Complete the isPositive function below. It has one integer parameter, a. If the value of a is positive, it must return the string YES. Otherwise, it must throw an Error according to the following rules:
+// If a is 0, throw an Error with  Zero Error.
+// If a is negative, throw an Error with  Negative Error.
+
+//  Day 3       
+function isPositive(a) {
+
+    if (a === 0)  {
+        throw Error('Zero Error')
+    } else if  (a < 0) {
+        throw Error('Negative Error')
+    } else {
+        return 'YES'
+    }
+}
+
+
+console.log(isPositive(3))
+console.log(isPositive(2))
+console.log(isPositive(0))
+console.log(isPositive(-122))
+
+// *********** Day 3 END **************
 
 /*
  * Implement a Polygon class with the following properties:
@@ -212,13 +297,11 @@ class Polygon {
         this.length = length;
     }
 
-
     perimeter() {
         let total = this.length.reduce((a, b) => a + b, 0)
         return  total
     }
 }
-
 
 
 let rec1 = new Polygon([1, 2, 3])
@@ -229,27 +312,4 @@ let rec2 = new Polygon([10, 12, 5])
 console.log(rec1.perimeter())
 console.log(rec2.perimeter())
 
-
-// Complete the isPositive function below. It has one integer parameter, a. If the value of a is positive, it must return the string YES. Otherwise, it must throw an Error according to the following rules:
-
-// If a is 0, throw an Error with  Zero Error.
-// If a is negative, throw an Error with  Negative Error.
-
-//  Day 3       
-function isPositive(a) {
-
-    if (a === 0)  {
-        throw Error('Zero Error')
-    } else if  (a < 0) {
-        throw Error('Negative Error')
-    } else {
-        return 'YES'
-    }
-}
-
-
-console.log(isPositive(3))
-console.log(isPositive(2))
-console.log(isPositive(0))
-console.log(isPositive(-122))
 
