@@ -92,6 +92,22 @@ main()
 
 
 // *********** Day 2 START **************
+// Complete the vowelsAndConsonants function in the editor below. It has one parameter, a string, , consisting of lowercase English alphabetic letters (i.e., a through z). The function must do the following:
+
+// First, print each vowel in  on a new line. The English vowels are a, e, i, o, and u, and each vowel must be printed in the same order as it appeared in .
+// Second, print each consonant (i.e., non-vowel) in  on a new line in the same order as it appeared in .
+
+// function vowelsAndConsonants(s) {
+// }
+ 
+
+
+// console.log(vowelsAndConsonants('hello'))
+
+
+
+
+
 function getGrade(score) {
     let grade; 
     // Write your code here
@@ -272,8 +288,8 @@ function isPositive(a) {
 
 console.log(isPositive(3))
 console.log(isPositive(2))
-console.log(isPositive(0))
-console.log(isPositive(-122))
+// console.log(isPositive(0))
+// console.log(isPositive(-122))
 
 // *********** Day 3 END **************
 
@@ -313,3 +329,65 @@ console.log(rec1.perimeter())
 console.log(rec2.perimeter())
 
 
+
+
+// *********** Day 5 START **************
+// We provide the implementation for a Rectangle class in the editor. Perform the following tasks:
+
+// Add an area method to Rectangle's prototype.
+// Create a Square class that satisfies the following:
+// It is a subclass of Rectangle.
+// It contains a constructor and no other methods.
+// It can use the Rectangle class' area method to print the area of a Square object.
+
+
+class Rectangle {
+    constructor(w, h) {
+        this.w = w;
+        this.h = h;
+    }
+
+    area() {
+        return `${this.h}` * `${this.w}`
+    }
+}
+
+
+class Square extends Rectangle {
+    constructor(w, h) {
+        super(w, h)
+        
+    }
+}
+
+
+
+
+
+
+var myrec = new Rectangle(2, 3)
+
+console.log(myrec)
+console.log(myrec.area())
+
+var mySq = new Square(4,4)
+console.log(mySq)
+console.log(mySq.area())
+
+
+
+
+/*
+ *  Write code that adds an 'area' method to the Rectangle class' prototype
+ */
+
+/*
+ * Create a Square class that inherits from Rectangle and implement its class constructor
+ */
+
+
+
+
+
+
+// *********** Day 5 END **************
