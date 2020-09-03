@@ -346,22 +346,20 @@ class Rectangle {
         this.w = w;
         this.h = h;
     }
+}
 
-    area() {
+Rectangle.prototype.area = function() {
         return `${this.h}` * `${this.w}`
     }
-}
+
 
 
 class Square extends Rectangle {
-    constructor(w, h) {
-        super(w, h)
+    constructor(length) {
+        super(length, length)
         
     }
 }
-
-
-
 
 
 
@@ -370,7 +368,7 @@ var myrec = new Rectangle(2, 3)
 console.log(myrec)
 console.log(myrec.area())
 
-var mySq = new Square(4,4)
+var mySq = new Square(3,4)
 console.log(mySq)
 console.log(mySq.area())
 
