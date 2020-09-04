@@ -373,19 +373,34 @@ console.log(mySq)
 console.log(mySq.area())
 
 
-
-
-/*
- *  Write code that adds an 'area' method to the Rectangle class' prototype
- */
-
-/*
- * Create a Square class that inherits from Rectangle and implement its class constructor
- */
-
-
-
-
-
-
 // *********** Day 5 END **************
+
+
+// *********** Day 6 START **************
+// Given a date string, dateString, in the format MM/DD/YYYY, find and return the day name for that date. Each day name must be one of the following strings: 
+// Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, or Saturday. For example, the day name for the date 12/07/2016 is Wednesday.
+
+// The days of the week are: "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+function getDayName(dateString) {
+    //create array of names of the week
+    let dayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'  ]
+    //use the new Date to grab date, dateString is the string user passes in
+    let d = new Date(dateString)
+    //use getDay to return day of the week
+    let day = dayName[d.getDay()]
+    // Write your code here
+    console.log(day)
+
+
+    console.log(dayName)
+        return day
+    }
+    
+
+    
+
+
+console.log(getDayName('09/06/2020'))
+
+
+// *********** Day 6 END **************
