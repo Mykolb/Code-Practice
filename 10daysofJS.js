@@ -397,9 +397,6 @@ function getDayName(dateString) {
     }
     
 
-    
-
-
 console.log(getDayName('09/06/2020'))
 
 
