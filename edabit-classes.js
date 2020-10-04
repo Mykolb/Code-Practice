@@ -155,12 +155,12 @@ console.log(review instanceof Review, true)
 console.log(review.hasOwnProperty("rating"), true, "The class Review needs to have a value for rating.")
 console.log(review.hasOwnProperty("user"), true, "The class Review needs to have a value for user.")
 
-if(typeof Bookstore === "undefined") {
-	return null 
-} else {
-console.log(Bookstore.hasOwnProperty("books"), true, "The class Bookstore needs to have a value for books.")
-console.log(Bookstore.hasOwnProperty("prices"), true, "The class Bookstore needs to have a value for prices.")
-}
+// if(typeof Bookstore === "undefined") {
+// 	return null 
+// } else {
+// console.log(Bookstore.hasOwnProperty("books"), true, "The class Bookstore needs to have a value for books.")
+// console.log(Bookstore.hasOwnProperty("prices"), true, "The class Bookstore needs to have a value for prices.")
+// }
 
 
 
@@ -215,4 +215,47 @@ console.log(player2.getWeight(), 'Jimmy Garoppolo weighs 102kg')
 
 console.log(player3.getAge(), 'Julio Jones is age 31')
 console.log(player3.getHeight(), 'Julio Jones is 191cm')
-console.log(player3.getWeight(), 'Julio Jones weighs 100kg')
+
+
+
+
+// Create the instance properties fullname and email in the Employee class. Given a person's first and last names:
+
+// Form the fullname by simply joining the first and last name together, separated by a space.
+// Form the email by joining the first and last name together with a . in between, and follow it with @company.com at the end. Make sure the entire email is in lowercase.
+
+
+
+
+class Employee {
+	constructor (firstname, lastname) {
+		this.firstname = firstname
+		this.lastname = lastname
+		// Complete the code!
+        this.fullname = `${this.firstname} ${this.lastname}`
+        this.email = (this.firstname + '.' + this.lastname + '@company.com').toLowerCase()
+		
+	}
+}
+
+emp1 = new Employee("John", "Smith")
+emp2 = new Employee("Mary",  "Sue")
+emp3 = new Employee("Antony", "Walker")
+emp4 = new Employee("Joshua", "Senoron")
+
+console.log(emp1.firstname, "John")
+console.log(emp1.lastname, "Smith")
+console.log(emp1.fullname, "John Smith")
+console.log(emp1.email, "john.smith@company.com")
+console.log(emp2.firstname, "Mary")
+console.log(emp2.lastname, "Sue")
+console.log(emp2.fullname, "Mary Sue")
+console.log(emp2.email, "mary.sue@company.com")
+console.log(emp3.firstname, "Antony")
+console.log(emp3.lastname, "Walker")
+console.log(emp3.fullname, "Antony Walker")
+console.log(emp3.email, "antony.walker@company.com")
+console.log(emp4.firstname, "Joshua")
+console.log(emp4.lastname, "Senoron")
+console.log(emp4.fullname, "Joshua Senoron")
+console.log(emp4.email, "joshua.senoron@company.com")

@@ -393,78 +393,81 @@ console.log(p3.compareAge(p1), "Samuel is the same age as me.")
 console.log(p3.compareAge(p2), "Joel is older than me.")
 
 
-// Challenge
-// Create a Book class using a JavaScript function - instantiable. x 
-// It should have a author and published property. x
-
-// Create an Author class using a literal object - singleton.
-
-// It should have a name and books property.
-
-// Create a Publisher class by using the new constructor and an anonymous function - singleton.
-
-// It should have a authors and books property.
-
-// Create a Review class using a class declaration - instantiable.
-
-// It should have a rating and user property.
-// Bonus (optional)
-// Create a Bookstore class using an IIFE - singleton. It should have a books and prices property.
-
-// Notes
-// All classes should begin with Capital letters.
-// All class properties should have default(initial) values.
 
 
-class Book {
-    constructor(author, published) {
-        this.author = author;
-        this.published = published;
-    }
-}
 
-class Author extends Book {
-    constructor(name, books) {
-        super(books, name)
-        this.name = name;
-        this.books = books;
 
-    }
-}
+// Create a function that returns the ASCII value of the passed in character.
+//you betta use that method gurl!
 
-class Publisher extends Author {
-    constructor(books, name) { 
-        super(books)
-        this.authors = authors;
-        
-    }
-}
-
-class Review {
-    constructor(rating, user) {
-        this.rating = rating;
-        this.user = user; 
-    }
+function ctoa(c) {
+	return c.charCodeAt()
 }
 
 
-let book = new Book 
-let review = new Review 
+console.log(ctoa(' '), 32)
+console.log(ctoa('A'), 65)
+console.log(ctoa(']'), 93)
+console.log(ctoa('^'), 94)
+console.log(ctoa('c'), 99)
 
-console.log(book instanceof Book, true)
-console.log(book.hasOwnProperty("author"), true, "The class Book needs to have a value for author.")
-console.log(book.hasOwnProperty("published"), true, "The class Book needs to have a value for published.")
-console.log(Author.hasOwnProperty("name"), true, "The class Author needs to have a value for name.")
-console.log(Author.hasOwnProperty("books"), true, "The class Author needs to have a value for books.")
-console.log(Publisher.hasOwnProperty("authors"), true, "The class Publisher needs to have a value for authors.")
-console.log(Publisher.hasOwnProperty("books"), true, "The class Publisher needs to have a value for books.")
-console.log(review instanceof Review, true)
-console.log(review.hasOwnProperty("rating"), true, "The class Review needs to have a value for rating.")
-console.log(review.hasOwnProperty("user"), true, "The class Review needs to have a value for user.")
 
-if(typeof Bookstore === "undefined") {
-	return null 
-} else {
-console.log(Bookstore.hasOwnProperty("books"), true, "The class Bookstore needs to have a value for books.")
-console.log(Bookstore.hasOwnProperty("prices"), true, "The class Bookstore needs to have a value for prices.")
+// The packaging system is running wild! The candy is lying loose all over in the warehouse, the cereal is missing, and bread is stuffed in a bottle. 
+//What is going on here? The candy should be in plastic and the bread should be in a bag.
+// The packaging machine is running the getContainer() function to retrieve the container of a product. But something is not right...
+
+function getContainer(product) {
+	let container
+  switch (product) {
+		case "Bread":
+            container = "bag"
+            break
+		case "Beer":
+            container = "bottle"
+            break
+		case "Milk":
+			container = "bottle"
+			break
+		case "Cerials":
+			container = "box"
+			break
+		case "Eggs":
+			container = "carton"
+			break
+		case "Candy":
+            container = "plastic"
+            break
+		default:
+			container = null
+	}
+
+	return container
 }
+
+console.log(getContainer("Bread"), "bag")
+console.log(getContainer("Milk"), "bottle")
+console.log(getContainer("Beer"), "bottle")
+console.log(getContainer("Eggs"), "carton")
+console.log(getContainer("Candy"), "plastic")
+console.log(getContainer("Cheese"), null)
+
+
+// Create a function that accepts an array and returns the last item in the array.
+
+function getLastItem(arr) {
+  return arr.pop()
+
+}
+
+console.log(getLastItem(['Cat', 'Dog', 'Duck']), 'Duck')
+console.log(getLastItem([1, 2, 3]), 3)
+console.log(getLastItem([undefined]))
+console.log(getLastItem([true, false, false, true]), true)
+console.log(getLastItem([7, 'String', false, undefined, null]), null)
+console.log(getLastItem([false]), false)
+console.log(getLastItem([undefined, undefined, undefined]), undefined)
+console.log(getLastItem([1, 2, 3, 56, 87, 23, 65, 45]), 45)
+console.log(getLastItem(['Apple', 'Orange', undefined]), undefined)
+console.log(getLastItem([true, false, 'Apple']), 'Apple')
+console.log(getLastItem([null, null, null]), null)
+console.log(getLastItem([1]), 1)
