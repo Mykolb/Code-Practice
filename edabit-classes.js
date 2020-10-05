@@ -114,46 +114,46 @@ console.log(p3.compareAge(p2), "Joel is older than me.")
 // All class properties should have default(initial) values.
 
 
-class Book {
-    constructor(author, published) {
-        this.author = author;
-        this.published = published;
-    }
-}
+// class Book {
+//     constructor(author, published) {
+//         this.author = author;
+//         this.published = published;
+//     }
+// }
 
-let Author = {
-    name: this.name,
-    books: this.books,
-}
+// let Author = {
+//     name: this.name,
+//     books: this.books,
+// }
 
-let Publisher = new class {
-    constructor(authors, books) {
-        this.authors = authors;
-        this.books = books;
-    }
-}
+// let Publisher = new class {
+//     constructor(authors, books) {
+//         this.authors = authors;
+//         this.books = books;
+//     }
+// }
 
-class Review {
-    constructor(rating, user) {
-        this.rating = rating;
-        this.user = user; 
-    }
-}
+// class Review {
+//     constructor(rating, user) {
+//         this.rating = rating;
+//         this.user = user; 
+//     }
+// }
 
 
-let book = new Book 
-let review = new Review 
+// let book = new Book 
+// let review = new Review 
 
-console.log(book instanceof Book, true)
-console.log(book.hasOwnProperty("author"), true, "The class Book needs to have a value for author.")
-console.log(book.hasOwnProperty("published"), true, "The class Book needs to have a value for published.")
-console.log(Author.hasOwnProperty("name"), true, "The class Author needs to have a value for name.")
-console.log(Author.hasOwnProperty("books"), true, "The class Author needs to have a value for books.")
-console.log(Publisher.hasOwnProperty("authors"), true, "The class Publisher needs to have a value for authors.")
-console.log(Publisher.hasOwnProperty("books"), true, "The class Publisher needs to have a value for books.")
-console.log(review instanceof Review, true)
-console.log(review.hasOwnProperty("rating"), true, "The class Review needs to have a value for rating.")
-console.log(review.hasOwnProperty("user"), true, "The class Review needs to have a value for user.")
+// console.log(book instanceof Book, true)
+// console.log(book.hasOwnProperty("author"), true, "The class Book needs to have a value for author.")
+// console.log(book.hasOwnProperty("published"), true, "The class Book needs to have a value for published.")
+// console.log(Author.hasOwnProperty("name"), true, "The class Author needs to have a value for name.")
+// console.log(Author.hasOwnProperty("books"), true, "The class Author needs to have a value for books.")
+// console.log(Publisher.hasOwnProperty("authors"), true, "The class Publisher needs to have a value for authors.")
+// console.log(Publisher.hasOwnProperty("books"), true, "The class Publisher needs to have a value for books.")
+// console.log(review instanceof Review, true)
+// console.log(review.hasOwnProperty("rating"), true, "The class Review needs to have a value for rating.")
+// console.log(review.hasOwnProperty("user"), true, "The class Review needs to have a value for user.")
 
 // if(typeof Bookstore === "undefined") {
 // 	return null 
@@ -259,3 +259,87 @@ console.log(emp4.firstname, "Joshua")
 console.log(emp4.lastname, "Senoron")
 console.log(emp4.fullname, "Joshua Senoron")
 console.log(emp4.email, "joshua.senoron@company.com")
+
+
+
+// Write a class called Name and create the following attributes given a first name and last name (as fname and lname):
+
+// An attribute called fullname which returns the first and last names.
+// A attribute called initials which returns the first letters of the first and last name. Put a . between the two letters.
+// Remember to allow the attributes fname and lname to be accessed individually as well.
+
+// Make sure only the first letter of each name is capitalised.
+
+class Name {
+	constructor(fname, lname, fullname, initials) {
+        this.fname = fname[0].toUpperCase() + fname.slice(1).toLowerCase()
+        this.lname = lname[0].toUpperCase() + lname.slice(1).toLowerCase()
+        this.fullname = `${this.fname} ${this.lname}`
+        this.initials = this.fname[0] + '.' + this.lname[0]
+    }
+}
+
+
+
+a1 = new Name("john", "SMITH")
+console.log(a1.fname, "John")
+console.log(a1.lname, "Smith")
+console.log(a1.fullname, "John Smith")
+console.log(a1.initials, "J.S")
+
+a2 = new Name("sARah", "fRolliE")
+console.log(a2.fname, "Sarah")
+console.log(a2.lname, "Frollie")
+console.log(a2.fullname, "Sarah Frollie")
+console.log(a2.initials, "S.F")
+
+
+// Create a Book constructor that has two properties :
+
+// Title
+// Author
+// and two methods:
+
+// A method named getTitle that returns: "Title: " + the instance title.
+// A method named getAuthor that returns: "Author: " + the instance author.
+// and instantiate this constructor by creating 3 new books:
+
+// Pride and Prejudice - Jane Austen (PP)
+// Hamlet - William Shakespeare (H)
+// War and Peace - Leo Tolstoy (WP)
+// Name the new object instances PP, H, and WP, respectively.
+
+
+class Book {
+    constructor(title, author) {
+        this.title = title
+        this.author = author
+    }
+    getTitle() {
+        return "Title:" + ' ' + `${this.title}`
+    }
+
+    getAuthor() {
+        return "Author:" + ' ' +`${this.author}`
+    }
+}
+
+// Instantiate your Book constructor here
+PP = new Book("Pride and Prejudice", "Jane Austen")
+H = new Book("Hamlet", "William Shakespeare")
+WP = new Book("War and Peace", "Leo Tolstoy")
+
+
+
+console.log(PP.title, "Pride and Prejudice")
+console.log(PP.author, "Jane Austen")
+console.log(PP.getTitle(), 'Title: Pride and Prejudice')
+console.log(PP.getAuthor(), 'Author: Jane Austen')
+console.log(H.title, "Hamlet")
+console.log(H.author, "William Shakespeare")
+console.log(H.getTitle(), 'Title: Hamlet')
+console.log(H.getAuthor(), 'Author: William Shakespeare')
+console.log(WP.title, "War and Peace")
+console.log(WP.author, "Leo Tolstoy")
+console.log(WP.getTitle(), 'Title: War and Peace')
+console.log(WP.getAuthor(), 'Author: Leo Tolstoy')

@@ -471,3 +471,7 @@ console.log(getLastItem(['Apple', 'Orange', undefined]), undefined)
 console.log(getLastItem([true, false, 'Apple']), 'Apple')
 console.log(getLastItem([null, null, null]), null)
 console.log(getLastItem([1]), 1)
+
+
+
+
