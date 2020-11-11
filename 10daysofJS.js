@@ -97,12 +97,28 @@ main()
 // First, print each vowel in  on a new line. The English vowels are a, e, i, o, and u, and each vowel must be printed in the same order as it appeared in .
 // Second, print each consonant (i.e., non-vowel) in  on a new line in the same order as it appeared in .
 
-// function vowelsAndConsonants(s) {
-// }
+function vowelsAndConsonants(s) {
+
+
+    const vowels = 'aeiou';
+    var consStr = '';
+    //loop through string length + log the vowels if true
+    for(var i = 0; i < s.length; i++) {
+       if (vowels.includes(s[i])) {
+           console.log(s[i]);
+       }
+       //false log the consonants + print on new line
+       else {
+           consStr += s[i] + '\n';
+       }
+    }
+    
+    console.log(consStr);
+}
  
 
 
-// console.log(vowelsAndConsonants('hello'))
+console.log(vowelsAndConsonants('hello'))
 
 
 
