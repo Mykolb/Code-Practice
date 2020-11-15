@@ -227,7 +227,6 @@ console.log(getLetter('rrs'))
 console.log(getLetter('mxy'))
 console.log(getLetter('bay'))
 
-
 // *********** Day 2 END **************
 
 
@@ -309,6 +308,8 @@ console.log(isPositive(2))
 
 // *********** Day 3 END **************
 
+// *********** Day 4 START **************
+
 /*
  * Implement a Polygon class with the following properties:
  * 1. A constructor that takes an array of integer side lengths.
@@ -323,7 +324,7 @@ console.log(isPositive(2))
 // When executed with a properly implemented Polygon class, this code should print the result of.
 //reduce to sum all values in the arr and return single value
 //oops! almost forget to pass in the param
-// DAY 4
+
 class Polygon {
     constructor(length) {
         this.length = length;
@@ -345,6 +346,57 @@ console.log(rec1.perimeter())
 console.log(rec2.perimeter())
 
 
+
+
+// Complete the function in the editor. It has one parameter: an array, a, of objects. Each object in the array has two integer properties denoted by x and y. 
+// The function must return a count of all such objects o in array a that satisfy o.x == o.y.
+
+// Input Format
+
+// The first line contains an integer denoting .
+// Each of the  subsequent lines contains two space-separated integers describing the values of  and .
+
+
+function getCount(objects) {
+  let count = 0;
+    //need for of loop, ierate through obj, pull out values that are the same, count em up!
+    for (let val of objects) {
+          if (val.x == val.y) {
+              count++
+              console.log(val.x);
+              console.log(val.y)
+          }
+         
+      
+      
+      }
+      return count
+}
+
+
+console.log(getCount(
+    [
+    {x:1, y:1},
+    {x:2, y:3},
+    {x:3, y:3},
+    {x:3, y:4},
+    {x:4, y:5},
+]))
+
+
+console.log(getCount(
+    [
+    {x:1, y:1},
+    {x:2, y:2},
+    {x:3, y:3},
+    {x:4, y:4},
+    {x:4, y:5},
+    {x:6, y:6},
+    {x:7, y:8}
+]))
+
+
+// *********** Day 4 END **************
 
 
 // *********** Day 5 START **************
@@ -388,6 +440,40 @@ var mySq = new Square(3,4)
 console.log(mySq)
 console.log(mySq.area())
 
+
+// The code in the editor has a tagged template literal that passes the area and perimeter of a rectangle to a tag function named sides. 
+// Recall that the first argument of a tag function is an array of string literals from the template, 
+// and the subsequent values are the template's respective expression values.
+
+// Complete the function in the editor so that it does the following:
+
+// Finds the initial values of s1 and s2 by plugging the area and perimeter values into the formula:
+// where A is the rectangle's area and P is its perimeter.
+// Creates an array consisting of  and  and sorts it in ascending order.
+// Returns the sorted array.
+
+
+function sides(literals, ...expressions) {
+     //declare variables
+    let area;
+    let perimeter;
+    let s1;
+    let s2;
+    let myArr;
+
+    //destructured to pull out area + perimeter
+    [area, perimeter] = expressions
+
+    //using the formula provdided in the description
+    s1 = (perimeter + Math.sqrt(perimeter*perimeter - 16 * area))/4
+    s2 = (perimeter - Math.sqrt(perimeter*perimeter - 16 * area))/4
+
+    //put this  side into []
+    myArr = [s1, s2]
+
+    //sort that sucka!
+    return myArr.sort()
+}
 
 // *********** Day 5 END **************
 
