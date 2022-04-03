@@ -20,8 +20,6 @@ for (let i = 1; i <= 9; i++) {
     buttonTxt++;
     btns.innerHTML = buttonTxt;
     btns.id = 'btn' + buttonTxt;
-    
-
     btns.style.width = '30%';
     btns.style.height = '48px';
     btns.style.fontSize ='24px';

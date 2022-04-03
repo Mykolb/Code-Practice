@@ -503,3 +503,39 @@ console.log(getDayName('09/06/2020'))
 
 
 // *********** Day 6 END **************
+
+
+// *********** Day 7 START **************
+// Complete the function in the editor below by returning a RegExp object, r, 
+// that matches any string s that begins and ends with the same vowel. Recall that the English vowels are a, e, i, o, and u.
+function regexVar(re) {
+//     /*
+//      * Declare a RegExp object variable named 're'
+//      * It must match a string that starts and ends with the same vowel (i.e., {a, e, i, o, u})
+//      */
+    
+
+    
+
+    
+
+//      //going yo search the string
+//     /*
+//      * Do not remove the return statement
+//      */
+
+
+
+
+    return re;
+}
+
+
+
+
+// console.log('adobe')
+
+
+
+
+// *********** Day 7 END **************
