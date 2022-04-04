@@ -57,3 +57,14 @@ console.log(isSeven(7),  true)
 console.log(isSeven(10),  false)
 console.log(isSeven(20),  false)
 console.log(isSeven(7),  true)
+
+// Return a String as an Integer
+// Create a function that takes a string and returns it as an integer.
+function stringInt(str) {
+	return parseInt(str)
+}
+
+console.log(stringInt("6"), 6)
+console.log(stringInt("2"), 2)
+console.log(stringInt("10"), 10)
+console.log(stringInt("666"), 666)
