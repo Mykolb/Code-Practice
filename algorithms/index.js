@@ -58,3 +58,70 @@ function futurePeople(population, n) {
 console.log(futurePeople(256, 2), 976)
 console.log(futurePeople(3248, 6), 5408)
 console.log(futurePeople(5240, 3), 6320)
+
+// Movie Theatre Admittance
+// Write a function that checks whether a person can watch an MA15+ rated movie. One of the following two conditions is required for admittance:
+// The person is at least 15 years old.
+// They have parental supervision.
+// The function accepts two parameters, age and isSupervised. Return a boolean.
+const acceptIntoMovie = (age, isSupervised) => {
+	return age >= 15 || isSupervised === true ? true : false
+}
+console.log(acceptIntoMovie(14, true), true)
+console.log(acceptIntoMovie(15, true), true)
+console.log(acceptIntoMovie(16, true), true)
+console.log(acceptIntoMovie(14, false), false)
+console.log(acceptIntoMovie(15, false), true)
+console.log(acceptIntoMovie(16, false), true)
+console.log(acceptIntoMovie(14.99999, true), true)
+console.log(acceptIntoMovie(14.99999, false), false)
+
+// Sum of Cubes
+// Create a function that takes a positive integer n, and returns the sum of all the cubed values from 1 to n.
+// For example, if n is 3:
+//look for an explanation on youtube
+function sumCubes(n) {
+    let sum = 0;
+	for(let i=1; i <= n; i++ ) {
+        console.log(sum += i**3)
+        
+    }
+    return sum
+}
+
+console.log(sumCubes(1), 1)
+console.log(sumCubes(2), 9)
+console.log(sumCubes(3), 36)
+console.log(sumCubes(4), 100)
+console.log(sumCubes(5), 225)
+console.log(sumCubes(6), 441)
+console.log(sumCubes(7), 784)
+console.log(sumCubes(8), 1296)
+console.log(sumCubes(9), 2025)
+console.log(sumCubes(10), 3025)
+console.log(sumCubes(123), 58155876)
+console.log(sumCubes(125), 62015625)
+console.log(sumCubes(133), 79405921)
+console.log(sumCubes(167), 196784784)
+console.log(sumCubes(188), 315630756)
+console.log(sumCubes(199), 396010000)
+console.log(sumCubes(200), 404010000)
+console.log(sumCubes(300), 2038522500)
+console.log(sumCubes(400), 6432040000)
+console.log(sumCubes(500), 15687562500)
+console.log(sumCubes(12345), 5807306426319225)
+
+// Four Passengers and a Driver
+// A typical car can hold four passengers and one driver, allowing five people to travel around. 
+// Given n number of people, return how many cars are needed to seat everyone comfortably.
+function carsNeeded(n) {
+    const passengerLimit = 5;
+    return Math.floor(Math.ceil(n/passengerLimit))
+}
+
+console.log(carsNeeded(0), 0)
+console.log(carsNeeded(1), 1)
+console.log(carsNeeded(4), 1)
+console.log(carsNeeded(5), 1)
+console.log(carsNeeded(6), 2)
+console.log(carsNeeded(18), 4)
