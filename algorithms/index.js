@@ -79,7 +79,6 @@ console.log(acceptIntoMovie(14.99999, false), false)
 // Sum of Cubes
 // Create a function that takes a positive integer n, and returns the sum of all the cubed values from 1 to n.
 // For example, if n is 3:
-//look for an explanation on youtube
 function sumCubes(n) {
     let sum = 0;
 	for(let i=1; i <= n; i++ ) {
@@ -125,3 +124,47 @@ console.log(carsNeeded(4), 1)
 console.log(carsNeeded(5), 1)
 console.log(carsNeeded(6), 2)
 console.log(carsNeeded(18), 4)
+
+// Stuttering Function
+// Write a function that stutters a word as if someone is struggling to read it. 
+// The first two letters are repeated twice with an ellipsis ... and space after each, 
+// and then the word is pronounced with a question mark ?.
+function stutter(word) {
+	const splitIt = word.split(' ').join()
+    const newString = String(splitIt)
+    const stutterString = newString.slice(0, 2)+ '...'+ ' ' + newString.slice(0, 2)+'...'+ ' ' + newString+'?'
+    return stutterString
+}
+console.log(stutter("incredible"), "in... in... incredible?")
+console.log(stutter("am"), "am... am... am?")
+console.log(stutter("outstanding"), "ou... ou... outstanding?")
+
+// Create a function that returns the number of arguments it was called with.
+// How Many D's Are There?
+// Create a function that counts how many D's are in a sentence.
+// Examples
+// countDs("My friend Dylan got distracted in school.") ➞ 4
+// countDs("Debris was scattered all over the yard.") ➞ 3
+// countDs("The rodents hibernated in their den.") ➞ 3
+function countDs(sentence) {
+    const newSentence = sentence
+    console.log((newSentence))
+
+    let counter = 0;
+    for(let i = 0; i <= newSentence.length; i++) {
+      
+        console.log(newSentence[i])
+        if(newSentence[i] === "d" || newSentence[i] === 'D') {
+            console.log(newSentence[i])
+            console.log(counter++)
+
+        }
+       
+    }
+    // was returning in the for loop...doh!
+    return counter
+}
+
+console.log(countDs("My friend Dylan got distracted at school"), 4)
+console.log(countDs("Debris was scattered all over the place."), 2)
+console.log(countDs("The rodents hibernated in their den."), 3)
