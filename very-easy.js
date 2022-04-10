@@ -296,3 +296,182 @@ const length = str => str.length
 console.log(length('hello'))
 console.log(length('i'))
 console.log(length('suuuuup'))
+
+
+
+
+class BasicPlan {
+	static canStream = true;
+	static canDownload = true;
+	static numOfDevices = 1;
+	static hasSD = true;
+	static hasHD = false;
+	static hasUHD = false;
+	static price = '$8.99';
+
+
+		
+}
+// Write the classes for StandardPlan and PremiumPlan here!
+
+class StandardPlan extends BasicPlan {
+			static hasHD = true;
+			static numOfDevices = 2;
+			static price = '$12.99';
+	}
+
+
+
+class PremiumPlan extends StandardPlan {
+		static hasUHD = true;
+		static numOfDevices = 4;
+		static price = '$15.99';
+	}
+
+
+console.log(BasicPlan.canStream, true)
+console.log(BasicPlan.canDownload, true)
+console.log(BasicPlan.numOfDevices, 1)
+console.log(BasicPlan.hasSD, true)
+console.log(BasicPlan.hasHD, false)
+console.log(BasicPlan.hasUHD, false)
+console.log(BasicPlan.price, '$8.99')
+console.log(StandardPlan.canStream, true, 'Remember to add the StandardPlan class!')
+console.log(StandardPlan.canDownload, true)
+console.log(StandardPlan.numOfDevices, 2)
+console.log(StandardPlan.hasSD, true)
+console.log(StandardPlan.hasHD, true)
+console.log(StandardPlan.hasUHD, false)
+console.log(StandardPlan.price, '$12.99')
+console.log(PremiumPlan.canStream, true, 'Remember to add the PremiumPlan class!')
+console.log(PremiumPlan.canDownload, true)
+console.log(PremiumPlan.numOfDevices, 4)
+console.log(PremiumPlan.hasSD, true)
+console.log(PremiumPlan.hasHD, true)
+console.log(PremiumPlan.hasUHD, true)
+console.log(PremiumPlan.price, '$15.99')
+
+
+
+// Create a method in the Person class which returns how another person's age compares. Given the instances p1, p2 and p3, which will be initialised with the attributes name and age, 
+// return a sentence in the following format:
+
+// {other person name} is {older than / younger than / the same age as} me.
+
+class Person {
+	constructor(name, age, other) {
+		this.name = name;
+		this.age = age;
+	}
+
+	compareAge(other) {
+        // Write code here!
+       if (other.age > this.age) {
+           console.log(other.age)
+        //    console.log(this.age)
+           return `${other.name} is older than me.`
+       } else if (this.age > other.age) {
+        return `${other.name} is younger than me.`
+       } else {
+        return `${other.name} is the same age as me.`
+       }
+		
+	}
+}
+
+p1 = new Person("Samuel", 24)
+p2 = new Person("Joel", 36)
+p3 = new Person("Lily", 24)
+
+console.log(p1.compareAge(p2), "Joel is older than me.")
+console.log(p1.compareAge(p3), "Lily is the same age as me.")
+
+console.log(p2.compareAge(p1), "Samuel is younger than me.")
+console.log(p2.compareAge(p3), "Lily is younger than me.")
+
+console.log(p3.compareAge(p1), "Samuel is the same age as me.")
+console.log(p3.compareAge(p2), "Joel is older than me.")
+
+
+
+
+
+
+// Create a function that returns the ASCII value of the passed in character.
+//you betta use that method gurl!
+
+function ctoa(c) {
+	return c.charCodeAt()
+}
+
+
+console.log(ctoa(' '), 32)
+console.log(ctoa('A'), 65)
+console.log(ctoa(']'), 93)
+console.log(ctoa('^'), 94)
+console.log(ctoa('c'), 99)
+
+
+// The packaging system is running wild! The candy is lying loose all over in the warehouse, the cereal is missing, and bread is stuffed in a bottle. 
+//What is going on here? The candy should be in plastic and the bread should be in a bag.
+// The packaging machine is running the getContainer() function to retrieve the container of a product. But something is not right...
+
+function getContainer(product) {
+	let container
+  switch (product) {
+		case "Bread":
+            container = "bag"
+            break
+		case "Beer":
+            container = "bottle"
+            break
+		case "Milk":
+			container = "bottle"
+			break
+		case "Cerials":
+			container = "box"
+			break
+		case "Eggs":
+			container = "carton"
+			break
+		case "Candy":
+            container = "plastic"
+            break
+		default:
+			container = null
+	}
+
+	return container
+}
+
+console.log(getContainer("Bread"), "bag")
+console.log(getContainer("Milk"), "bottle")
+console.log(getContainer("Beer"), "bottle")
+console.log(getContainer("Eggs"), "carton")
+console.log(getContainer("Candy"), "plastic")
+console.log(getContainer("Cheese"), null)
+
+
+// Create a function that accepts an array and returns the last item in the array.
+
+function getLastItem(arr) {
+  return arr.pop()
+
+}
+
+console.log(getLastItem(['Cat', 'Dog', 'Duck']), 'Duck')
+console.log(getLastItem([1, 2, 3]), 3)
+console.log(getLastItem([undefined]))
+console.log(getLastItem([true, false, false, true]), true)
+console.log(getLastItem([7, 'String', false, undefined, null]), null)
+console.log(getLastItem([false]), false)
+console.log(getLastItem([undefined, undefined, undefined]), undefined)
+console.log(getLastItem([1, 2, 3, 56, 87, 23, 65, 45]), 45)
+console.log(getLastItem(['Apple', 'Orange', undefined]), undefined)
+console.log(getLastItem([true, false, 'Apple']), 'Apple')
+console.log(getLastItem([null, null, null]), null)
+console.log(getLastItem([1]), 1)
+
+
+
+
