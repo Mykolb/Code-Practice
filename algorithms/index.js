@@ -168,3 +168,43 @@ function countDs(sentence) {
 console.log(countDs("My friend Dylan got distracted at school"), 4)
 console.log(countDs("Debris was scattered all over the place."), 2)
 console.log(countDs("The rodents hibernated in their den."), 3)
+
+
+// Is it Time for Milk and Cookies?
+// Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! 
+// Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) 
+// and false otherwise. Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
+function timeForMilkAndCookies(date) {
+	const day = date.getDate()
+    console.log(day)
+    const month = date.getMonth()
+
+    let testy = day === 24 && month === 11 ? true :  false
+    console.log(testy)
+}
+
+console.log(timeForMilkAndCookies(new Date(2013, 11, 24)), true)
+console.log(timeForMilkAndCookies(new Date(3000, 11, 24)), true)
+console.log(timeForMilkAndCookies(new Date(2154, 11, 11)), false)
+console.log(timeForMilkAndCookies(new Date(2010, 11, 2)), false)
+console.log(timeForMilkAndCookies(new Date(1980, 9, 24)), false)
+
+// The 3 Programmers Problem
+// You hired three programmers and you (hopefully) pay them. 
+// Create a function that takes three numbers (the hourly wages of each programmer)
+// and returns the difference between the highest-paid programmer and the lowest-paid.
+function programmers(one, two, three) {
+    const arr = [one, two, three]
+	const order = arr.sort((a, b) => a - b )
+    console.log(order)
+    const diff = order[2] - order[0]
+    return diff
+}
+
+console.log(programmers(1,   5,   9),   8)
+console.log(programmers(43,  33,  43),  10)
+console.log(programmers(88,  14,  23),  74)
+console.log(programmers(33,  72,  74),  41)
+console.log(programmers(147, 33,  526), 493)
+console.log(programmers(234, 345, 457), 223)
+
